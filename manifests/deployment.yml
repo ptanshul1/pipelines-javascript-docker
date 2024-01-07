@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ptanshulpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ptanshulpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ptanshulpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ptanshulpipelinesjavascriptdocker 
+          image: mycontainerregistry1a.azurecr.io/ptanshulpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
